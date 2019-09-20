@@ -5,12 +5,9 @@ logging:
     edu.haizi.springboot_springmvc: debug
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    hikari:
-      jdbc-url: jdbc:mysql:///:3306/springboot
-      username: root
-      password: 110417
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 110417
+    url: jdbc:mysql://127.0.0.1:3306/springboot?serverTimezone=UTC&characterEncoding=utf-8
 mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
-
+  type-aliases-package: edu.haizi.springboot_springmvc.domain
